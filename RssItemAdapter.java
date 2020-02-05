@@ -1,7 +1,13 @@
-package edu.usna.cs.rssfeed;
+/**RssItemAdapter.java
+ * extends ArrayAdapter<RssItem>
+ * Implements OnItemClickListener
+ * Author: MIDN Alam
+ * Date: 30 APR 2014
+ * This activity populates a RssItem list using a custom RssItemAdapter */
+
+package edu.usna.cs.alam_project;
 
 import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +19,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem> {
 
 	private Context context;
 
-	public RssItemAdapter(Context context, int textViewResourceId,
-			List<RssItem> items) {
+	public RssItemAdapter(Context context, int textViewResourceId, List<RssItem> items) {
 		super(context, textViewResourceId, items);
 		this.context = context;
 	}
@@ -22,8 +27,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem> {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view = convertView;
 		if (view == null) {
-		    LayoutInflater inflater = (LayoutInflater) context
-			.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		    view = inflater.inflate(R.layout.item_layout, null);
 		}
 

@@ -1,12 +1,40 @@
-package edu.usna.cs.rssfeed;
+/**RssItem.java  
+ * implements Serializable 
+ * Author:      Didar Alam, m150084@usna.edu
+ * Date:        12 APR 2014
+ * Description:  An RssItem object to hold the data.
+ *
+ */
 
-public class RssItem {
+package edu.usna.cs.alam_project;
+/**
+ * RssItem.java
+ * implements Serializable
+ * Author: MIDN Alam
+ * Date: 30 APR 2014
+ * This activity is designed to create a custom RssItem and store the file.*/
+
+
+
+import java.io.Serializable;
+
+
+public class RssItem implements Serializable{
 	
 	private String link;
 	private String pubDate;
 	private String description;
 	private String title;
 	
+	//constructor with no args
+		public RssItem () {
+			this.title = "Need to Update!";
+			this.pubDate = "Click the Update botton to get started.";
+			this.description = "Please Wait while downloading Your Feed Back!";
+			this.link = "http://www.usna.edu/homepage.php";
+		}
+	
+		/**Setters and getters*/
 	public String getLink() {
 		return link;
 	}
@@ -39,3 +67,4 @@ public class RssItem {
 	
 
 }
+
